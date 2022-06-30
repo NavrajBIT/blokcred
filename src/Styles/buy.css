@@ -1,0 +1,228 @@
+.buy_box{
+    /* border: 2px solid red; */
+    /* height: 200vh; */
+    height: 100%;
+    margin: 0px 2px 0px 2px;
+    padding-bottom:10px;
+
+}
+.buy_info{
+    /* border: 2px solid black; */
+    /* height: 100%; */
+
+    width: 150vh;
+    margin: 10px auto;
+    /* margin-bottom: 201px; */
+
+    padding: 10px 20px  70px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius:15px ;    
+    /* opacity: 80%; */
+    /* background-color: white; */
+
+
+
+}
+
+.upper_part{
+    /* border: 2px solid black; */
+    display: flex;
+    padding: 5px;
+    
+}
+
+.nft_image{
+    /* border: 2px solid red; */
+    /* height:100%; */
+    border-radius: 12px;
+    width: 250px;
+    flex: 30%;
+
+}
+.nft_image img{
+    height: 100%;
+    width: 100%;
+}
+
+.nft_details{
+    /* border: 2px solid red; */
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    /* height: 150px; */
+    color: white;
+    /* margin-top: -10px; */
+    /* padding-top: -10px; */
+    box-sizing: content-box;
+
+}
+/* .buy_now{
+
+} */
+
+.buy_now p{
+    font-size: 18px;
+    font-weight: 700;
+    /* text-align: right; */
+    /* margin: auto; */
+    margin-left: 35%;
+}
+
+.price{
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+    font-size: 19px;
+    /* margin: auto; */
+    margin-left: 35%;
+
+
+    /* text-align: center; */
+
+}
+
+.nft_name h2{
+    /* border: 2px solid yellow; */
+    /* height: 20px; */
+    padding: 0px 0px;
+    /* text-align: right; */
+    margin-top: 0px;
+    margin-left: 10px;
+
+
+ } 
+
+.owner_createdby{
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: left;
+    /* margin-top: -5px; */
+}
+
+.owner {
+    margin-left: 20px;
+}
+
+.creator{
+    margin-left: 150px;
+}
+
+.buy_now{
+    /* border: 2px solid greenyellow; */
+    height: 150px;
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    margin-top: -10px;
+    /* padding-bottom: 10px; */
+}
+
+.buy_button button{
+    padding: 10px 10px;
+    width: 200px;
+    margin-top: 22px;
+    border-radius: 11px;
+    border: none;
+    font-weight: bolder;
+    cursor:pointer;
+    color: white;
+    background-image: linear-gradient(90deg, #00e7e7, #8946df);
+}
+
+.buy_button button:hover{
+    border: 2px solid white;
+}
+
+.lower_part{
+    /* border: 2px solid red; */
+    margin-top: 15px;
+}
+
+.content_box{
+    border: 1px solid white;
+    height: 150px;
+    width: 261px;
+    /* margin-top: -30px; */
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    /* box-sizing: border-box;    */
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.buy_description_box{
+    /* border: 2px solid red; */
+    margin-top: 0px;
+    width: 273px;
+    height: 100vh;
+}   
+
+.buy_description_box .heading{
+    /* margin-top: -25px; */
+    color: white;
+    border: 1px solid white ;
+    height: 30px;
+    display: flex;
+    /* padding: 5px;     */
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 15px;
+
+}
+
+.nft_name{
+    /* border: 2px solid red; */
+    text-align: left;
+    margin-left: 10px;
+}
+
+.desc , .spec , .details{
+    margin-top: 10px;
+    /* border: 2px solid red; */
+    text-align: left;
+    margin-left: 2px;
+}
+
+
+/* css for collaps box */
+
+.collapsible {
+    background-color: rgb(56, 33, 137);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 30%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+  }
+  
+  .active, .collapsible:hover {
+    background-color: rgb(49, 101, 180);
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    /* text-align: left; */
+    width: 233px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 200px;
+
+  }

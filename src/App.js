@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+import { Route, Link, BrowserRouter as Router, Routes } from 'react-router-dom'  
+import Create from './components/Create/Create';
+import Buy from './components/Buy/Buy';
+import Sell from './components/Sell/Sell';
+import Institution from './components/Institution/Institution';
+import View from './components/View/View';
+import BlockCred from './components/BlockCred/BlockCred';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar/>
+        <Routes>
+            <Route path="/create" element={<Create/>} /> 
+            <Route path="/buy" element={<Buy/>} /> 
+            <Route path="/sell" element={<Sell/>} /> 
+            <Route path="/institution" element={<Institution/>} /> 
+            <Route path="/view" element={<View/>} /> 
+            <Route path="/" element={<BlockCred  />} /> 
+            <Route path="/blockcred" element={<BlockCred  />} /> 
+
+
+
+
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

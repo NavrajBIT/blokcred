@@ -1,0 +1,38 @@
+.blockcred_box{
+    /* border: 2px solid red; */
+    height: 100vh;
+}
+.blockcred_info{
+    height: 100vh;
+    /* border: 2px solid white; */
+    /* width: 180vh; */
+    margin: auto;
+    padding-top: 90px;
+    
+}
+.heading{
+    background-color: #da45ff;
+    background-image: linear-gradient(45deg,#da45ff,#00e7e7);
+    background-size: 100%;
+    text-align: center;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.heading h1{
+    font-size: 50px;
+
+}
+
+.blockcred_content_box{
+    /* border: 2px solid white; */
+    color: white;
+    /* padding: 10px 10px 10px 10px; */
+    /* font-size: 1.2rem; */
+    font-family: Space Grotesk,sans-serif;
+    width: 150vh;
+    margin: auto;
+    margin-top: 50px;
+    /* color: #00e7e7; */
+
+}
