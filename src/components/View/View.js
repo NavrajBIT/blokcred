@@ -5,6 +5,8 @@ import img1 from "../../Styles/nftimage.webp";
 import img2 from "../../Styles/nftimage2.jfif";
 import img3 from "../../Styles/nftimage3.jpg";
 
+import {BiMessageError} from 'react-icons/bi';
+
 const View = () => {
   const [connected, setConnected] = useState(false);
   // document.getElementById("connect").addEventListener('onClick' , ()=>{
@@ -89,11 +91,11 @@ const View = () => {
                 <h1>?</h1>
               </div>
               <div className="error_content">
-                <h3>Connect To Your </h3>
-                <h3>MetaMask Wallet To View This Page </h3>
-                <div className="connect_button">
-                  <p id="connect">Connect</p>
+                <div className="error_icon">
+                    <BiMessageError className="icon"/>
                 </div>
+                <h3>Connect Your MetaMask Wallet To Access  </h3>
+                
               </div>
             </div>
           </>

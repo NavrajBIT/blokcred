@@ -158,6 +158,20 @@ const Create = () => {
 
             </div>
 
+            <div className="artistnameField">
+              <label htmlFor="artistName">Enter Your Polygon MetaMask Wallet  Address*</label>
+              <input
+                onChange={(e)=>handle(e)}
+                value={data.artistName}
+                type="text"
+                id="artistName"
+                placeholder="Enter Address"
+                
+              />
+              {/* <p id="artist">Enter The Artist Name Field *</p> */}
+
+            </div>
+
             <div className="description_box">
               <label htmlFor="description">Description*</label>
               <textarea

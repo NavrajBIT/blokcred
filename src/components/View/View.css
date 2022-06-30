@@ -110,6 +110,9 @@
 }
 .error_heading h1{
   font-size: 100px;
+  text-shadow: 5px 5px #FF0000;
+  /* text-shadow: 5px 5px ; */
+
 
 }
 
@@ -118,32 +121,30 @@
   flex: 50%;
   text-align: left;
   color: white;
+  margin-top: 70px;
 }
 
-.error_page .error_content:hover{
+/* .error_page .error_content:hover{
   color: #14f3f3;
-}
+} */
+
+
 
 .error_content h3{
   font-size: 20px;
-
+  /* text-shadow: 1px 1px #FF0000; */
 }
 
-
-.connect_button p{
-    width: 200px;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 5px 5px;
-    background-image: linear-gradient(90deg, #00e7e7, #8946df);
-    border-radius: 12px;
-    color: white;
-    font-weight: 500;
-    font-size: 18px; 
-    margin-top: 10px;
-    border: none;
-    text-align: center;
+.error_icon{
+  /* border: 2px solid red; */
+  height: 300px;
 }
+
+.icon{
+  height: 100%;
+  width: 100%;
+}
+ 
 
 
 

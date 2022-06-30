@@ -111,7 +111,7 @@ const Navbar = () => {
             <div className="buttons">
 
                 <div className="blockcred" >
-                    <button value="blockcred" onMouseOver={mouse} id='block' style={{border:"2px solid white"}} onClick={navigateTo} > BlockCred </button>
+                    <button value="blockcred" onMouseOver={mouse} id='block' style={{border:"2px solid white"}} onClick={navigateTo} > BlokCred </button>
                 </div>
                 <div className="create">
                     <button value="create" onMouseOver={mouse} id='create' onClick={navigateTo} > Individuals </button>
@@ -121,7 +121,7 @@ const Navbar = () => {
                     <button value="view" onMouseOver={mouse} id='view' onClick={navigateTo} > View </button>
                 </div>
                 <div className="institution">
-                    <button value="institution" onMouseOver={mouse} id='institution' onClick={navigateTo} > Institution </button>
+                    <button value="institution" onMouseOver={mouse} id='institution' onClick={navigateTo} > Institutions </button>
                 </div>
 
                  {/* <div className="buy">   
