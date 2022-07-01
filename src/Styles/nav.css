@@ -122,3 +122,11 @@
     border: 2px solid white;
     /* color: black; */
 }
+
+#block{
+    border: 2px solid white;
+}
+
+#block:hover{
+    border: 2px solid white;
+}

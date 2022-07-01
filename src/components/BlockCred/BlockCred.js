@@ -1,5 +1,9 @@
 import React from "react";
 import "./BlockCred.css";
+import img1 from "../../Styles/nftimage.webp"
+import img2 from "../../Styles/nftimage2.jfif"
+import img3 from "../../Styles/nftimage3.jpg"
+
 const BlockCred = () => {
   return (
     <>
@@ -19,6 +23,27 @@ const BlockCred = () => {
               wallet. Hence BlockCred helps users to own their personal
               documents forever using blockchain technology.
             </p>
+          </div>
+
+          <div className="solution_content">
+            <div className="heading">
+              <h1>Solutions</h1>
+              <h1>Institutions & Organization We Empower</h1>
+            </div>
+            <div className="solution_info">
+                <img src={img1} alt="" />
+                <img src={img2} alt="" />
+                <img src={img3} alt="" />
+                <img src={img1} alt="" />
+                <img src={img2} alt="" />
+                <img src={img3} alt="" />
+
+{/* 
+
+                <img src={img1} alt="" />
+                <img src={img2} alt="" />
+                <img src={img3} alt="" /> */}
+            </div>
           </div>
         </div>
       </div>

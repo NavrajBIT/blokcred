@@ -14,13 +14,13 @@ const Navbar = () => {
         if(value === "create"){
             navigate('/create')
             document.getElementById('block').style.border = "none"
-            document.getElementById('block').style.color = "white"
-            document.getElementById('create').style.border = "2px solid #00e7e7"
-            document.getElementById('create').style.color = "#00e7e7"
-            document.getElementById('view').style.border = "none"
-            document.getElementById('view').style.color = "white"
-            document.getElementById('institution').style.border = "none"
-            document.getElementById('institution').style.color = "white"
+            // document.getElementById('block').style.color = "white"
+            // document.getElementById('create').style.border = "2px solid #00e7e7"
+            // document.getElementById('create').style.color = "#00e7e7"
+            // document.getElementById('view').style.border = "none"
+            // document.getElementById('view').style.color = "white"
+            // document.getElementById('institution').style.border = "none"
+            // document.getElementById('institution').style.color = "white"
         }
         
         else if(value === "buy"){
@@ -34,38 +34,38 @@ const Navbar = () => {
         else if(value === "institution"){
             navigate('/institution')
             document.getElementById('block').style.border = "none"
-            document.getElementById('block').style.color = "white"
-            document.getElementById('institution').style.border = "2px solid #00e7e7"
-            document.getElementById('institution').style.color = "#00e7e7"
-            document.getElementById('view').style.border = "none"
-            document.getElementById('view').style.color = "white"
-            document.getElementById('create').style.color = "white"
-            document.getElementById('create').style.border = "none"
+            // document.getElementById('block').style.color = "white"
+            // document.getElementById('institution').style.border = "2px solid #00e7e7"
+            // document.getElementById('institution').style.color = "#00e7e7"
+            // document.getElementById('view').style.border = "none"
+            // document.getElementById('view').style.color = "white"
+            // document.getElementById('create').style.color = "white"
+            // document.getElementById('create').style.border = "none"
 
         }
         else if(value === "view"){
             navigate('/view')
             document.getElementById('block').style.border = "none"
-            document.getElementById('block').style.color = "white"
-            document.getElementById('view').style.border = "2px solid #00e7e7"
-            document.getElementById('view').style.color = "#00e7e7"
-            document.getElementById('create').style.border = "none"
-            document.getElementById('create').style.color = "white"
-            document.getElementById('institution').style.border = "none"
-            document.getElementById('institution').style.color = "white"
+            // document.getElementById('block').style.color = "white"
+            // document.getElementById('view').style.border = "2px solid #00e7e7"
+            // document.getElementById('view').style.color = "#00e7e7"
+            // document.getElementById('create').style.border = "none"
+            // document.getElementById('create').style.color = "white"
+            // document.getElementById('institution').style.border = "none"
+            // document.getElementById('institution').style.color = "white"
 
 
         }
         else if(value === "blockcred"){
             navigate('/blockcred')
-            document.getElementById('block').style.border = "2px solid #00e7e7"
-            document.getElementById('block').style.color = "#00e7e7"
-            document.getElementById('create').style.color = "white"
-            document.getElementById('create').style.border = "none"
-            document.getElementById('view').style.color = "white"
-            document.getElementById('view').style.border = "none"
-            document.getElementById('institution').style.border = "none"
-            document.getElementById('institution').style.color = "white"
+            document.getElementById('block').style.border = "2px solid white"
+            // document.getElementById('block').style.color = "#00e7e7"
+            // document.getElementById('create').style.color = "white"
+            // document.getElementById('create').style.border = "none"
+            // document.getElementById('view').style.color = "white"
+            // document.getElementById('view').style.border = "none"
+            // document.getElementById('institution').style.border = "none"
+            // document.getElementById('institution').style.color = "white"
 
         }
         
@@ -84,17 +84,15 @@ const Navbar = () => {
         const val = e.target.value
         if(val === 'blockcred'){
             document.getElementById("block").style.border="2px solid white"
-
-
         }
         else if(val === 'create'){
-            document.getElementById("create").style.border="2px solid white"
+            // document.getElementById("create").style.border="2px solid white"
         }
         else if(val === 'view'){
-            document.getElementById("view").style.border="2px solid white"
+            // document.getElementById("view").style.border="2px solid white"
         }
         else if(val === 'institution'){
-            document.getElementById("institution").style.border="2px solid white"
+            // document.getElementById("institution").style.border="2px solid white"
         }
     }
   return (
