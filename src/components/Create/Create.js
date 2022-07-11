@@ -1,67 +1,62 @@
 import React, { useState } from "react";
 import "../../Styles/create.css";
-import Axios from 'axios'
-import {ethers} from 'ethers'
-
+import { ethers } from "ethers";
 
 const Create = () => {
-    const url = ""
-    const [data,setData] = useState({
-        assetName : "",
-        artistName : "",
-        description : "",
-        specification : "",
-     
-    })
+  const url = "";
+  const [data, setData] = useState({
+    assetName: "",
+    artistName: "",
+    description: "",
+    specification: "",
+  });
 
-    function submit(e){
-        e.preventDefault();
-        // Axios.post(url,{
-        //     assetName : data.assetName,
-        //     artistName : data.artistName,
-        //     description : data.description,
-        //     specification: data.specification
-        // }).then((res)=>{
-        //     console.log(res.data);
-            
-        // })
-        if(data.artistName === ""){
-          document.getElementById('artist').style.display = "inline"
-        }
-        else{
-          document.getElementById('artist').style.display = "none"
-        }
-        if(data.assetName === ""){
-          document.getElementById('asset').style.display = "inline"
-        }
-        else{
-          document.getElementById('artist').style.display = "none"
-        }
-        if(data.specification === ""){
-          document.getElementById('specs').style.display = "inline"
-        }
-        else{
-          document.getElementById('artist').style.display = "none"
-        }
-        if(data.description === ""){
-          document.getElementById('desc').style.display = "inline"
-        }
-        else{
-          document.getElementById('artist').style.display = "none"
-        }
-        
-        // const value = {
+  const [uploadedImage, setUploadedImage] = useState("");
 
-        // }
-    }
-    function handle(e){
-        const newdata = {...data}
-        newdata[e.target.id] = e.target.value
-        setData(newdata)
-        console.log(newdata);
+  async function submit(e) {
+    e.preventDefault();
 
-    }
+    // if (e.artistName === "") {
+    //   document.getElementById("artist").style.display = "inline";
+    // } else {
+    //   document.getElementById("artist").style.display = "none";
+    // }
+    // if (data.assetName === "") {
+    //   document.getElementById("asset").style.display = "inline";
+    // } else {
+    //   document.getElementById("artist").style.display = "none";
+    // }
+    // if (data.specification === "") {
+    //   document.getElementById("specs").style.display = "inline";
+    // } else {
+    //   document.getElementById("artist").style.display = "none";
+    // }
+    // if (data.description === "") {
+    //   document.getElementById("desc").style.display = "inline";
+    // } else {
+    //   document.getElementById("artist").style.display = "none";
+    // }
 
+    const endPoint = "http://localhost:8000/individualfileupload";
+    let formData = new FormData();
+    formData.append("file", uploadedImage);
+    formData.append("name", e.target[1].value);
+    formData.append("description", e.target[3].value);
+    formData.append("account", e.target[2].value);
+    const response = await fetch(endPoint, { method: "POST", body: formData })
+      .then((res) => {
+        return res.json();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    console.log(response);
+  }
+  function handle(e) {
+    const newdata = { ...data };
+    newdata[e.target.id] = e.target.value;
+    setData(newdata);
+  }
 
   return (
     <div className="create_box">
@@ -73,12 +68,11 @@ const Create = () => {
           <p>* Required Fields</p>
         </div>
         <div className="form">
-          <form action="" onSubmit={(e)=>submit(e)}>
+          <form onSubmit={(e) => submit(e)}>
             {/* <div className="headText">
                         <h3>Image ,Video  , Audio , or 3D Model</h3>
                     </div> */}
             <label htmlFor="imageBox" className="uploadlabel">
-
               <h3> Upload Image* </h3>
             </label>
             <div className="imageBox">
@@ -92,8 +86,6 @@ const Create = () => {
 
               <div className="Neon Neon-theme-dragdropbox">
                 <input
-                
-                
                   style={{
                     zindex: 999,
                     opacity: 0,
@@ -109,7 +101,10 @@ const Create = () => {
                   id="filer_input2"
                   multiple="multiple"
                   type="file"
-                  onChange={(e) => console.log(e.target.value)}
+                  onChange={(e) => {
+                    console.log(e.target.files[0].name);
+                    setUploadedImage(e.target.files[0]);
+                  }}
                 />
                 <div className="Neon-input-dragDrop">
                   <div className="Neon-input-inner">
@@ -133,18 +128,16 @@ const Create = () => {
             <div className="nameField">
               <label htmlFor="assetName">Asset Name*</label>
               <input
-                onChange={(e)=>handle(e)}
+                onChange={(e) => handle(e)}
                 value={data.assetName}
                 type="text"
                 id="assetName"
                 placeholder="Enter Asset Name"
-                
               />
               <p id="asset">Enter The Asset Name Field *</p>
-
             </div>
 
-            <div className="artistnameField">
+            {/* <div className="artistnameField">
               <label htmlFor="artistName">Owner Name*</label>
               <input
                 onChange={(e)=>handle(e)}
@@ -156,36 +149,32 @@ const Create = () => {
               />
               <p id="artist">Enter The Artist Name Field *</p>
 
-            </div>
+            </div> */}
 
             <div className="artistnameField">
-              <label htmlFor="artistName">Enter Your Polygon MetaMask Wallet  Address*</label>
+              <label htmlFor="artistName">Wallet Address*</label>
               <input
-                onChange={(e)=>handle(e)}
+                onChange={(e) => handle(e)}
                 value={data.artistName}
                 type="text"
                 id="artistName"
                 placeholder="Enter Address"
-                
               />
               {/* <p id="artist">Enter The Artist Name Field *</p> */}
-
             </div>
 
             <div className="description_box">
               <label htmlFor="description">Description*</label>
               <textarea
-                onChange={(e)=>handle(e)}
+                onChange={(e) => handle(e)}
                 value={data.description}
                 name=""
                 id="description"
                 placeholder="Enter Description"
                 cols="30"
                 rows="10"
-                
               ></textarea>
-                <p id="desc">Enter The Description Field *</p>
-
+              <p id="desc">Enter The Description Field *</p>
             </div>
 
             {/* <div className="specification_box">
@@ -205,17 +194,26 @@ const Create = () => {
             </div> */}
 
             <div className="button">
-                <button type="submit" onClick={async () => {
-                  alert("Connecting to the metamask")
-                  if(window.ethereum){
-                    const provider = new ethers.providers.Web3Provider(window.ethereum)  
-                    const signer =  provider.getSigner()
-                    const sign = await signer.signMessage("Welcome to the meta world ")
-                    sign.then((data) => {
-                      console.log(data)
-                    })
-                  }
-                }} >Create</button>
+              <button
+                type="submit"
+                // onClick={async () => {
+
+                //   if (window.ethereum) {
+                //     const provider = new ethers.providers.Web3Provider(
+                //       window.ethereum
+                //     );
+                //     const signer = provider.getSigner();
+                //     const sign = await signer.signMessage(
+                //       "Welcome to the meta world "
+                //     );
+                //     sign.then((data) => {
+                //       console.log(data);
+                //     });
+                //   }
+                // }}
+              >
+                Create
+              </button>
             </div>
           </form>
         </div>
