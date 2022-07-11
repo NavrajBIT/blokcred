@@ -8,7 +8,7 @@ import img3 from "../../Styles/nftimage3.jpg";
 import {BiMessageError} from 'react-icons/bi';
 
 const View = () => {
-  const [connected, setConnected] = useState(false);
+  const [connected, setConnected] = useState(true);
   // document.getElementById("connect").addEventListener('onClick' , ()=>{
   //   alert("clicked")
   // })

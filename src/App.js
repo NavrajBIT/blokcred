@@ -10,6 +10,9 @@ import Sell from './components/Sell/Sell';
 import Institution from './components/Institution/Institution';
 import View from './components/View/View';
 import BlockCred from './components/BlockCred/BlockCred';
+import Certificate from './components/Certificate/Certificate';
+import Fonts from './components/Fonts/Fonts';
+import AddYourName from './components/Certificate/AddYourName';
 function App() {
   return (
     <Router>
@@ -23,6 +26,13 @@ function App() {
             <Route path="/view" element={<View/>} /> 
             <Route path="/" element={<BlockCred  />} /> 
             <Route path="/blockcred" element={<BlockCred  />} /> 
+            <Route path="/certificate" element={<Certificate  />} /> 
+            <Route path="/fonts" element={<Fonts/>} /> 
+            <Route path="/addyourname" element={<AddYourName/>} /> 
+
+            
+
+
 
 
 

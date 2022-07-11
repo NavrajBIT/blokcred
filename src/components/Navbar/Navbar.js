@@ -103,7 +103,8 @@ const Navbar = () => {
             <div className="logo">
                 {/* <img src="" alt="" /> */}
                 <div className="header">
-                    <h3 style={{fontSize : "35px"}}>BlockCred</h3>
+                    {/* <h3 style={{fontSize : "35px"}}>Blo ckCred</h3> */}
+                    <img src="https://beimagine.tech/wp-content/uploads/2022/04/BITlogo-white.png" alt="" width={100} height={80} />
                 </div>
             </div>
             <div className="buttons">
