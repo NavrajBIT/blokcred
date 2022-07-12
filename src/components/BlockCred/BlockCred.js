@@ -22,10 +22,11 @@ import image6  from "../DemoImages/image6.png"
 const BlockCred = () => {
   return (
     <>
+
       <div className="blockcred_box">
         <div className="blockcred_info">
           <div className="heading animate__heartBeat">
-            <h1 className="headingtext  ">
+            <h1 className="headingtext">
               BlokCred: Digital Certifications and Badges Hub
             </h1>
           </div>
@@ -50,9 +51,6 @@ const BlockCred = () => {
               <h1>Institutions & Organization We Empower</h1>
             </div>
             <div className="solution_info">
-              {/* <img src={img1} alt="" />
-                <img src={img2} alt="" />
-                <img src={img3} alt="" /> */}
               <div className="card_info" >
                 <div className="image_info">
                   <img src={image1} alt="" />

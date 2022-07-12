@@ -180,6 +180,8 @@
     margin-bottom: -10px;
 
 
+
+
 }
 
 
@@ -241,3 +243,196 @@
 
     border-radius: 20px;
 }
+
+
+/* responsive section */
+@media only screen and (min-width: 1500px) {
+    .create_box{
+        height: 120vh;
+        
+    }
+    .create_info  {
+        height: 100%;
+        /* padding: 210px 30px; */
+        
+    }
+    
+    .heading h1{
+        /* border: 2px solid red; */
+        font-size: 70px;
+    }
+    .back{
+        width: 105%;
+        height: 20vh;
+        
+    }
+    .blockcred_content_box{
+        font-size: 25px;
+        margin-top: 100px;
+    }
+
+    .solution_info{
+        /* border: 2px solid red; */
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 20px 100px 10px;
+    }
+
+    .solution_info .card_info{
+        width: 50vh;
+        height: 60vh;
+        padding: 20px 0px;
+        cursor: pointer;
+        margin-top: 100px;
+    }
+    
+    .card_info:hover{
+        /* border: 2px solid wheat; */
+        transform: scale(1.2);
+        transition: transform ease-in-out 450ms;
+        
+    }
+
+    .image_info{
+        /* border: 2px solid red; */
+        /* margin-right: 10px; */
+        min-width: 47vh;
+        min-height: 30vh;
+
+        
+    }
+    .solution_info .card_info .image_info  img{
+        margin: auto;
+        margin-right: 10px ;
+    }
+    .image_content h6{
+        font-size: 25px;
+
+        background-color: #da45ff;
+        background-image: linear-gradient(45deg,#da45ff,#00e7e7);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+    
+    .solution_info .card_info .image_content{
+        font-size: 22px;
+        /* margin-top: 20px; */
+
+    }
+    .header img{
+        width: 200px;
+        margin-left: -15vh;
+    }
+
+    .connect button{
+        margin-right: -15vh;
+        width: 20vh;
+
+    }
+
+    .buttons{
+        width: 100vh;
+        padding: 20px 0px;
+    }
+
+    .buttons div button{
+        /* padding: 40px auto; */
+        /* height: 70px; */
+        /* border: 2px solid red; */
+        margin: auto;
+        margin-top: 0px;
+        width: 20vh;
+    }
+
+   
+
+    .nameField , .artistnameField  , .description_box  label   {
+        font-size: 27px;
+        padding: 10px 10px;
+    }
+
+    .artistnameField input{
+        width: 100vh;
+        height: 80px;
+        font-size: 22px;
+    }
+
+    .nameField   input{
+        width: 100vh;
+        height: 80px;
+        font-size: 25px;
+    }   
+
+    .description_box textarea {
+        width: 100vh;
+        /* height: 80px; */
+        font-size: 22px;
+        margin: auto;
+        margin-left: 10px;
+
+    }
+
+    .Neon-theme-dragdropbox , .Neon-input-dragDrop {
+        width: 100vh;
+        /* height: 80px; */
+        font-size: 22px;
+        /* border: 2px solid red; */
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .button button{
+        width: 40vh;
+        /* padding: 20px 0px; */
+        /* margin-bottom: 130px; */
+        font-size: 30px;
+        /* margin: auto; */
+        margin-left: 10px;
+    }
+
+
+    .nft_information{
+        /* border: 2px solid red; */
+        height: 50vh;
+        margin-top: 60px;
+    }
+
+    .nft_information img{
+        height: 50vh;
+    }
+
+    .nft_content_section h2{
+        font-size: 70px;
+    }
+
+    .nft_content_section p{
+        font-size: 35px;
+        margin-top: 40px;
+    }
+
+    .benefit_section{
+        /* border: 2px solid red; */
+    }
+
+    .benefit_section  .heading h2{
+        font-size: 50px;
+    }
+
+    .benefit_section .small_container{
+        /* border: 2px solid red; */
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    .small_container:hover{
+        /* border: 2px solid wheat; */
+        transform: scale(1.2);
+        transition: transform ease-in-out 450ms;
+    }
+  }
