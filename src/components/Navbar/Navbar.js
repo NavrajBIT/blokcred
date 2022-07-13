@@ -4,77 +4,28 @@ import "../../Styles/nav.css";
 
 const Navbar = () => {
   let navigate = useNavigate();
-  const [clickedOn, setClickedOn] = useState({
-    create: false,
-    buy: false,
-    sell: false,
-  });
+
   const navigateTo = (e) => {
     let value = e.target.value;
     if (value === "create") {
       navigate("/create");
-      document.getElementById("block").style.border = "none";
-      // document.getElementById('block').style.color = "white"
-      // document.getElementById('create').style.border = "2px solid #00e7e7"
-      // document.getElementById('create').style.color = "#00e7e7"
-      // document.getElementById('view').style.border = "none"
-      // document.getElementById('view').style.color = "white"
-      // document.getElementById('institution').style.border = "none"
-      // document.getElementById('institution').style.color = "white"
     } else if (value === "buy") {
       navigate("/buy");
     } else if (value === "sell") {
       navigate("/sell");
     } else if (value === "institution") {
       navigate("/institution");
-      document.getElementById("block").style.border = "none";
-      // document.getElementById('block').style.color = "white"
-      // document.getElementById('institution').style.border = "2px solid #00e7e7"
-      // document.getElementById('institution').style.color = "#00e7e7"
-      // document.getElementById('view').style.border = "none"
-      // document.getElementById('view').style.color = "white"
-      // document.getElementById('create').style.color = "white"
-      // document.getElementById('create').style.border = "none"
     } else if (value === "view") {
       navigate("/view");
-      document.getElementById("block").style.border = "none";
-      // document.getElementById('block').style.color = "white"
-      // document.getElementById('view').style.border = "2px solid #00e7e7"
-      // document.getElementById('view').style.color = "#00e7e7"
-      // document.getElementById('create').style.border = "none"
-      // document.getElementById('create').style.color = "white"
-      // document.getElementById('institution').style.border = "none"
-      // document.getElementById('institution').style.color = "white"
     } else if (value === "blockcred") {
       navigate("/blockcred");
-      document.getElementById("block").style.border = "2px solid white";
-      // document.getElementById('block').style.color = "#00e7e7"
-      // document.getElementById('create').style.color = "white"
-      // document.getElementById('create').style.border = "none"
-      // document.getElementById('view').style.color = "white"
-      // document.getElementById('view').style.border = "none"
-      // document.getElementById('institution').style.border = "none"
-      // document.getElementById('institution').style.color = "white"
     } else {
       alert("There is no page like this one ");
-      // document.getElementById('create').style.border = "2px solid white"
-      // document.getElementById('view').style.border = "2px solid white"
-      // document.getElementById('institution').style.border = "2px solid white"
     }
   };
 
   const mouse = (e) => {
-    // console.log(e.target.value);
     const val = e.target.value;
-    if (val === "blockcred") {
-      document.getElementById("block").style.border = "2px solid white";
-    } else if (val === "create") {
-      // document.getElementById("create").style.border="2px solid white"
-    } else if (val === "view") {
-      // document.getElementById("view").style.border="2px solid white"
-    } else if (val === "institution") {
-      // document.getElementById("institution").style.border="2px solid white"
-    }
   };
   return (
     <>
@@ -99,7 +50,6 @@ const Navbar = () => {
               value="blockcred"
               onMouseOver={mouse}
               id="block"
-              style={{ border: "2px solid white" }}
               onClick={navigateTo}
             >
               {" "}
