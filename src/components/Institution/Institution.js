@@ -18,8 +18,15 @@ const Institution = () => {
       })
       .catch((err) => {
         console.log(err);
+        return "Server error";
       });
     console.log(response);
+    if (response !== "Server error") {
+      alert("Certificate created successfully.");
+      let explorerURL =
+        "https://mumbai.polygonscan.com/tx/" + response["tx_hash"];
+      window.open(explorerURL);
+    }
   };
   return (
     <>

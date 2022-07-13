@@ -5,19 +5,26 @@ import "../../Styles/nav.css";
 const Navbar = () => {
   let navigate = useNavigate();
 
+  const [selectedPage, setSelectedPage] = useState(1);
+  const selectedStyle = { border: "0.5px solid white" };
+
   const navigateTo = (e) => {
     let value = e.target.value;
     if (value === "create") {
+      setSelectedPage(2);
       navigate("/create");
     } else if (value === "buy") {
       navigate("/buy");
     } else if (value === "sell") {
       navigate("/sell");
     } else if (value === "institution") {
+      setSelectedPage(4);
       navigate("/institution");
     } else if (value === "view") {
+      setSelectedPage(3);
       navigate("/view");
     } else if (value === "blockcred") {
+      setSelectedPage(1);
       navigate("/blockcred");
     } else {
       alert("There is no page like this one ");
@@ -51,6 +58,7 @@ const Navbar = () => {
               onMouseOver={mouse}
               id="block"
               onClick={navigateTo}
+              style={selectedPage === 1 ? selectedStyle : { color: "white" }}
             >
               {" "}
               BlokCred{" "}
@@ -58,6 +66,7 @@ const Navbar = () => {
           </div>
           <div className="create">
             <button
+              style={selectedPage === 2 ? selectedStyle : { color: "white" }}
               value="create"
               onMouseOver={mouse}
               id="create"
@@ -70,6 +79,7 @@ const Navbar = () => {
 
           <div className="view">
             <button
+              style={selectedPage === 3 ? selectedStyle : { color: "white" }}
               value="view"
               onMouseOver={mouse}
               id="view"
@@ -81,6 +91,7 @@ const Navbar = () => {
           </div>
           <div className="institution">
             <button
+              style={selectedPage === 4 ? selectedStyle : { color: "white" }}
               value="institution"
               onMouseOver={mouse}
               id="institution"

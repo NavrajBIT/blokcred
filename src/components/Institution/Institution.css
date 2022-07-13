@@ -1,95 +1,97 @@
-.institution_box{
-    /* border: 2px solid red; */
-    height: 100vh;
+.institution_box {
+  /* border: 2px solid red; */
+  height: 100vh;
 }
 
-.institution_info{
-    /* border: 2px solid yellow;
+.institution_info {
+  /* border: 2px solid yellow;
     width: 150vh;
     margin: auto;
     padding: 10px 10px;*/
-    color: white; 
-    width: 150vh;
-    margin: 10px auto;
-    /* margin-bottom: 201px; */
+  color: white;
+  width: 150vh;
+  margin: 10px auto;
+  /* margin-bottom: 201px; */
 
-    padding: 10px 20px  70px 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius:15px ;   
+  padding: 10px 20px 70px 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 15px;
 }
 
-
-.institution_info div{
-    display: flex;
-    /* border: 2px solid red; */
-    margin: 20px auto 20px auto;
-    /* justify-content: center; */
-    padding: 10px 10px;
-    position: relative;
+.institution_info div {
+  display: flex;
+  /* border: 2px solid red; */
+  margin: 20px auto 20px auto;
+  /* justify-content: center; */
+  padding: 10px 10px;
+  position: relative;
 }
 
-.institution_info div label{
-    font-weight: bold;
-    font-size: 17px;
+.institution_info div label {
+  font-weight: bold;
+  font-size: 17px;
 
-    /* text-align: left; */
+  /* text-align: left; */
 }
 
-.institution_info div input{
-    /* text-align: right; */
-    /* border: 2px soid red; */
-    margin-left: auto;
-    /* position: absolute; */
-    /* right: 10%; */
-    /* right: 10px; */
-    width: 500px;
-    padding: 10px 10px;
-    border-radius: 10px;
-
+.institution_info div input {
+  /* text-align: right; */
+  /* border: 2px soid red; */
+  margin-left: auto;
+  /* position: absolute; */
+  /* right: 10%; */
+  /* right: 10px; */
+  width: 500px;
+  padding: 10px 10px;
+  border-radius: 10px;
 }
 
-.institution_info div input[type="file"]{
-    /* padding: 15px 15px; */
-    width: 500px;
-    /* border: 2px solid red; */
-    background-color: white;
-    color: black;
-    cursor: pointer;
-
-    
+.institution_info div input[type="file"] {
+  /* padding: 15px 15px; */
+  width: 500px;
+  /* border: 2px solid red; */
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
-.create_button{
-    /* text-align: center; */
-    /* border: 2px solid red; */
-
+.create_button {
+  /* text-align: center; */
+  /* border: 2px solid red; */
 }
 
-
-.create_button button{
-    padding: 10px 10px;
-    width: 200px;
-    /* margin-top: 22px; */
-    border-radius: 11px;
-    border: none;
-    font-weight: bolder;
-    cursor:pointer;
-    color: white;
-    background-image: linear-gradient(90deg, #00e7e7, #8946df);
-    margin: auto;
-    /* margin-left: 20px; */
-    margin-right: 36%;
+.create_button button {
+  padding: 10px 10px;
+  width: 200px;
+  /* margin-top: 22px; */
+  border-radius: 11px;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+  color: white;
+  background-image: linear-gradient(90deg, #00e7e7, #8946df);
+  margin: auto;
+  /* margin-left: 20px; */
+  margin-right: 36%;
 }
 
-.heading_box h2{
-    /* border: 2px solid red; */
-    margin: auto;
-    background-color: #da45ff;
-    background-image: linear-gradient(45deg,#da45ff,#00e7e7);
-    background-size: 100%;
-    text-align: center;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.heading_box h2 {
+  /* border: 2px solid red; */
+  margin: auto;
+  background-color: #da45ff;
+  background-image: linear-gradient(45deg, #da45ff, #00e7e7);
+  background-size: 100%;
+  text-align: center;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.no_of_certificate {
+  width: 700px;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
 
+  align-items: center;
 }

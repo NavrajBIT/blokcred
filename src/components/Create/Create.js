@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../Styles/create.css";
 import { ethers } from "ethers";
+import { Reader } from "@ethersproject/abi/lib/coders/abstract-coder";
 
 const Create = () => {
   const url = "";
@@ -12,6 +13,7 @@ const Create = () => {
   });
 
   const [uploadedImage, setUploadedImage] = useState("");
+  const [uploadedImageURL, setUploadedImageURL] = useState("");
 
   async function submit(e) {
     e.preventDefault();
@@ -49,8 +51,15 @@ const Create = () => {
       })
       .catch((err) => {
         console.log(err);
+        return "Server error";
       });
     console.log(response);
+    if (response !== "Server error") {
+      alert("Certificate created successfully.");
+      let explorerURL =
+        "https://mumbai.polygonscan.com/tx/" + response["tx_hash"];
+      window.open(explorerURL);
+    }
   }
   function handle(e) {
     const newdata = { ...data };
@@ -104,9 +113,19 @@ const Create = () => {
                   onChange={(e) => {
                     console.log(e.target.files[0].name);
                     setUploadedImage(e.target.files[0]);
+                    let filereader = new FileReader();
+                    filereader.addEventListener("load", () => {
+                      setUploadedImageURL(filereader.result);
+                    });
+                    filereader.readAsDataURL(e.target.files[0]);
                   }}
                 />
-                <div className="Neon-input-dragDrop">
+                <div
+                  className="Neon-input-dragDrop"
+                  style={{
+                    backgroundImage: "url('" + uploadedImageURL + "')",
+                  }}
+                >
                   <div className="Neon-input-inner">
                     <div className="Neon-input-icon">
                       <i className="fa fa-file-image-o"></i>
