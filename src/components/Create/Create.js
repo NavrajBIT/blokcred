@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../../Styles/create.css";
-import { ethers } from "ethers";
-import { Reader } from "@ethersproject/abi/lib/coders/abstract-coder";
+
 
 const Create = () => {
   const url = "";
@@ -68,6 +67,7 @@ const Create = () => {
   }
 
   return (
+    <MediaQuery minWidth={1824}> 
     <div className="create_box">
       <div className="create_info">
         <div className="header">
@@ -144,6 +144,8 @@ const Create = () => {
               </div>
             </div>
 
+
+
             <div className="nameField">
               <label htmlFor="assetName">Asset Name*</label>
               <input
@@ -213,32 +215,4 @@ const Create = () => {
             </div> */}
 
             <div className="button">
-              <button
-                type="submit"
-                // onClick={async () => {
 
-                //   if (window.ethereum) {
-                //     const provider = new ethers.providers.Web3Provider(
-                //       window.ethereum
-                //     );
-                //     const signer = provider.getSigner();
-                //     const sign = await signer.signMessage(
-                //       "Welcome to the meta world "
-                //     );
-                //     sign.then((data) => {
-                //       console.log(data);
-                //     });
-                //   }
-                // }}
-              >
-                Create
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Create;
