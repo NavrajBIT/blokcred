@@ -1,125 +1,199 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router";
 import "../../Styles/nav.css";
+import UserContext from "../../context/UserContext";
 
 const Navbar = () => {
   let navigate = useNavigate();
-
   const [selectedPage, setSelectedPage] = useState(1);
+  const [showMenu, setShowMenu] = useState(false);
   const selectedStyle = { border: "0.5px solid white" };
+  const user = useContext(UserContext);
 
-  const navigateTo = (e) => {
-    let value = e.target.value;
-    if (value === "create") {
-      setSelectedPage(2);
-      navigate("/create");
-    } else if (value === "buy") {
-      navigate("/buy");
-    } else if (value === "sell") {
-      navigate("/sell");
-    } else if (value === "institution") {
-      setSelectedPage(4);
-      navigate("/institution");
-    } else if (value === "view") {
-      setSelectedPage(3);
-      navigate("/view");
-    } else if (value === "blockcred") {
-      setSelectedPage(1);
-      navigate("/blockcred");
-    } else {
-      alert("There is no page like this one ");
-    }
-  };
-
-  const mouse = (e) => {
-    const val = e.target.value;
+  const Menu = () => {
+    return (
+      <div className="menu" id="menu">
+        <div
+          className="menuItem"
+          style={selectedPage === 1 ? selectedStyle : { cursor: "pointer" }}
+          onClick={() => {
+            setShowMenu(false);
+            setSelectedPage(1);
+            navigate("/home");
+          }}
+        >
+          Home
+        </div>
+        <div
+          className="menuItem"
+          style={selectedPage === 2 ? selectedStyle : { cursor: "pointer" }}
+          onClick={() => {
+            setShowMenu(false);
+            setSelectedPage(2);
+            navigate("/create");
+          }}
+        >
+          Individuals
+        </div>
+        <div
+          className="menuItem"
+          style={selectedPage === 3 ? selectedStyle : { cursor: "pointer" }}
+          onClick={() => {
+            setShowMenu(false);
+            setSelectedPage(3);
+            navigate("/view");
+          }}
+        >
+          View
+        </div>
+        <div
+          className="menuItem"
+          style={selectedPage === 4 ? selectedStyle : { cursor: "pointer" }}
+          onClick={() => {
+            setShowMenu(false);
+            setSelectedPage(4);
+            navigate("/institution");
+          }}
+        >
+          Institutions
+        </div>
+        <div
+          className="menuItem"
+          style={selectedPage === 5 ? selectedStyle : { cursor: "pointer" }}
+          onClick={() => {
+            setShowMenu(false);
+            setSelectedPage(5);
+            navigate("/souvenir");
+          }}
+        >
+          Souvenirs
+        </div>
+      </div>
+    );
   };
   return (
     <>
-      <div
-        className="nav"
-        //   style={{backdropFilter: "initial" ,  boxShadow: "0 5px 1em rgba(0, 0, 0, 0.2277777830759684)"}}
-      >
-        <div className="logo">
-          {/* <img src="" alt="" /> */}
-          <div className="header">
-            {/* <h3 style={{fontSize : "35px"}}>Blo ckCred</h3> */}
-            <img
-              src="https://beimagine.tech/wp-content/uploads/2022/04/BITlogo-white.png"
-              alt=""
-              width="150"
-            />
-          </div>
-        </div>
-        <div className="buttons">
-          <div className="blockcred">
-            <button
-              value="blockcred"
-              onMouseOver={mouse}
-              id="block"
-              onClick={navigateTo}
-              style={selectedPage === 1 ? selectedStyle : { color: "white" }}
-            >
-              {" "}
-              BlokCred{" "}
-            </button>
-          </div>
-          <div className="create">
-            <button
-              style={selectedPage === 2 ? selectedStyle : { color: "white" }}
-              value="create"
-              onMouseOver={mouse}
-              id="create"
-              onClick={navigateTo}
-            >
-              {" "}
-              Individuals{" "}
-            </button>
-          </div>
+      <div className="nav">
+        <img
+          src="https://beimagine.tech/wp-content/uploads/2022/04/BITlogo-white.png"
+          alt="Beyond Imagination Technologies"
+          width="150"
+          onClick={() => {
+            setSelectedPage(1);
+            navigate("/home");
+          }}
+        />
 
-          <div className="view">
-            <button
-              style={selectedPage === 3 ? selectedStyle : { color: "white" }}
-              value="view"
-              onMouseOver={mouse}
-              id="view"
-              onClick={navigateTo}
-            >
-              {" "}
-              View{" "}
-            </button>
-          </div>
-          <div className="institution">
-            <button
-              style={selectedPage === 4 ? selectedStyle : { color: "white" }}
-              value="institution"
-              onMouseOver={mouse}
-              id="institution"
-              onClick={navigateTo}
-            >
-              {" "}
-              Institutions{" "}
-            </button>
-          </div>
+        <div className="nav-center">
+          <button
+            style={selectedPage === 2 ? selectedStyle : { cursor: "pointer" }}
+            id="nav-center-create"
+            onClick={() => {
+              setSelectedPage(2);
+              navigate("/create");
+            }}
+          >
+            Individuals
+          </button>
 
-          {/* <div className="buy">   
-                    <button value="buy" onClick={navigateTo} >Buy</button>
-                </div>
-                <div className="sell">
-                    <button value="sell" onClick={navigateTo} > Sell</button>
-                </div> */}
-          {/* <div className="sell">
-                    <button value="sell" onClick={navigateTo} > Sell</button>
-                </div> */}
-        </div>
-        <div className="connect">
-          {/* <button>$0.02</button> */}
-          <button value="connect" onClick={navigateTo}>
-            {" "}
-            Connect Wallet
+          <button
+            style={selectedPage === 3 ? selectedStyle : { cursor: "pointer" }}
+            id="nav-center-view"
+            onClick={() => {
+              setSelectedPage(3);
+              navigate("/view");
+            }}
+          >
+            View
+          </button>
+
+          <button
+            style={selectedPage === 4 ? selectedStyle : { cursor: "pointer" }}
+            id="nav-center-institutions"
+            onClick={() => {
+              setSelectedPage(4);
+              navigate("/institution");
+            }}
+          >
+            Institutions
+          </button>
+          <button
+            style={selectedPage === 5 ? selectedStyle : { cursor: "pointer" }}
+            id="nav-center-souvenir"
+            onClick={() => {
+              setSelectedPage(5);
+              navigate("/souvenir");
+            }}
+          >
+            Souvenirs
           </button>
         </div>
+
+        <div className="nav-menu">
+          <button
+            onClick={() => {
+              setShowMenu(!showMenu);
+            }}
+          >
+            Menu
+          </button>
+        </div>
+
+        <button
+          onClick={() => {
+            user.login();
+          }}
+        >
+          {user.isConnected ? "Connected" : "Connect"}
+        </button>
       </div>
+
+      <div className="nav-center-down">
+        <button
+          style={selectedPage === 2 ? selectedStyle : { cursor: "pointer" }}
+          id="nav-center-create"
+          onClick={() => {
+            setSelectedPage(2);
+            navigate("/create");
+          }}
+        >
+          Individuals
+        </button>
+
+        <button
+          style={selectedPage === 3 ? selectedStyle : { cursor: "pointer" }}
+          id="nav-center-view"
+          onClick={() => {
+            setSelectedPage(3);
+            navigate("/view");
+          }}
+        >
+          View
+        </button>
+
+        <button
+          style={selectedPage === 4 ? selectedStyle : { cursor: "pointer" }}
+          id="nav-center-institutions"
+          onClick={() => {
+            setSelectedPage(4);
+            navigate("/institution");
+          }}
+        >
+          Institutions
+        </button>
+        <button
+          style={selectedPage === 5 ? selectedStyle : { cursor: "pointer" }}
+          id="nav-center-souvenir"
+          onClick={() => {
+            setSelectedPage(5);
+            navigate("/souvenir");
+          }}
+        >
+          Souvenirs
+        </button>
+      </div>
+
+      {showMenu && <Menu />}
     </>
   );
 };

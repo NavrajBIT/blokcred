@@ -1,0 +1,22 @@
+.metamask {
+  min-height: 100vh;
+  color: white;
+}
+
+.metamask button {
+  padding: 10px 20px;
+  font-size: x-large;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+}
+
+.metamask button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: chartreuse;
+}
+iframe {
+  width: 100%;
+  height: 56vw;
+}

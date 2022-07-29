@@ -1,0 +1,39 @@
+.loadingpage {
+  min-height: 100vh;
+  color: white;
+}
+
+.loadingbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+  font-size: larger;
+}
+
+.pending {
+  color: "red";
+  height: 50px;
+}
+
+.finished {
+  color: green;
+  height: 50px;
+}
+
+.loadingIcon {
+  height: 50px;
+  width: 50px;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center center;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: center center;
+  }
+}

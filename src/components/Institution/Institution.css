@@ -1,18 +1,13 @@
 .institution_box {
   /* border: 2px solid red; */
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .institution_info {
-  /* border: 2px solid yellow;
-    width: 150vh;
-    margin: auto;
-    padding: 10px 10px;*/
   color: white;
-  width: 150vh;
+  width: 100%;
+  min-height: 100vh;
   margin: 10px auto;
-  /* margin-bottom: 201px; */
-
   padding: 10px 20px 70px 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -92,6 +87,30 @@
   width: 700px;
   display: grid;
   grid-template-columns: 5fr 1fr;
-
   align-items: center;
+}
+
+.samplecertificate {
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.samplecertificate img {
+  border: 1px solid black;
+  margin: 10px;
+}
+.samplecertificate img:hover {
+  animation: scaleup2 0.5s;
+  transform: scale(1.5);
+}
+@keyframes scaleup2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
 }

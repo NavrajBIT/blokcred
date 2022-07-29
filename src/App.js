@@ -1,43 +1,35 @@
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import React from "react";
+import ReactDOM from "react-dom";
+import { Route, Link, BrowserRouter as Router, Routes } from "react-router-dom";
+import Create from "./components/Create/Create";
+import Institution from "./components/Institution/Institution";
+import View from "./components/View/View";
+import BlockCred from "./components/BlockCred/BlockCred";
+import Souvenier from "./components/Souvenier/Souvenier";
+import Admin from "./components/admin/admin";
+import Footer from "./components/footer/footer";
 
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-import { Route, Link, BrowserRouter as Router, Routes } from 'react-router-dom'  
-import Create from './components/Create/Create';
-import Buy from './components/Buy/Buy';
-import Sell from './components/Sell/Sell';
-import Institution from './components/Institution/Institution';
-import View from './components/View/View';
-import BlockCred from './components/BlockCred/BlockCred';
-import Certificate from './components/Certificate/Certificate';
-import Fonts from './components/Fonts/Fonts';
-import AddYourName from './components/Certificate/AddYourName';
+import UserState from "./context/userState";
+
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar/>
-        <Routes>
-            <Route path="/create" element={<Create/>} /> 
-            <Route path="/buy" element={<Buy/>} /> 
-            <Route path="/sell" element={<Sell/>} /> 
-            <Route path="/institution" element={<Institution/>} /> 
-            <Route path="/view" element={<View/>} /> 
-            <Route path="/" element={<BlockCred  />} /> 
-            <Route path="/blockcred" element={<BlockCred  />} /> 
-            <Route path="/certificate" element={<Certificate  />} /> 
-            <Route path="/fonts" element={<Fonts/>} /> 
-            <Route path="/addyourname" element={<AddYourName/>} /> 
-
-            
-
-
-
-
-
-
-        </Routes>
+        <UserState>
+          <Navbar />
+          <Routes>
+            <Route path="/create" element={<Create />} />
+            <Route path="/institution" element={<Institution />} />
+            <Route path="/view" element={<View />} />
+            <Route path="/" element={<BlockCred />} />
+            <Route path="/home" element={<BlockCred />} />
+            <Route path="/souvenir" element={<Souvenier />} />
+            <Route path="/admin" element={<Admin />} />
+          </Routes>
+          <Footer />
+        </UserState>
       </div>
     </Router>
   );

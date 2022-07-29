@@ -1,78 +1,55 @@
 import React from "react";
-
 import "./Institution.css";
 
+import certificate1 from "../CertificateImages/certificate1.png";
+import certificate2 from "../CertificateImages/certificate2.png";
+import certificate3 from "../CertificateImages/certificate3.png";
+import certificate4 from "../CertificateImages/certificate4.png";
+import certificate5 from "../CertificateImages/certificate5.png";
+
 const Institution = () => {
-  const createCertificate = async () => {
-    const endPoint = "http://localhost:8000/generatecertificate";
-    let formData = new FormData();
-    formData.append("name", document.getElementById("nameField").value);
-    formData.append(
-      "description",
-      "This is a certificate of attendance for APAC education event"
-    );
-    formData.append("account", document.getElementById("accountField").value);
-    const response = await fetch(endPoint, { method: "POST", body: formData })
-      .then((res) => {
-        return res.json();
-      })
-      .catch((err) => {
-        console.log(err);
-        return "Server error";
-      });
-    console.log(response);
-    if (response !== "Server error") {
-      alert("Certificate created successfully.");
-      let explorerURL =
-        "https://mumbai.polygonscan.com/tx/" + response["tx_hash"];
-      window.open(explorerURL);
-    }
-  };
   return (
     <>
       <div className="institution_box">
         <div className="institution_info">
           <div className="heading_box">
-            <h2>Create your digital credentials or NFTs</h2>
+            <h2>Please contact us to issue certificates in bulk.</h2>
           </div>
-          <div className="no_of_certificate">
-            <label htmlFor="nameField">Attendee Name</label>
-            <input type="text" id="nameField" placeholder="Enter name" />
+          <div className="heading_box">
+            <h2>email: support@beimagine.tech</h2>
           </div>
-          <div className="no_of_certificate">
-            <label htmlFor="accountField">Account address</label>
-            <input type="text" id="accountField" placeholder="Enter address" />
-          </div>
-
-          {/* <div className="upload_sample_certificate">
-            <label htmlFor="sample">Upload Sample Certificate</label>
-            <input
-              type="file"
-              id="file"
-              aria-label="File browser example"
-              placeholder="Upload Sample Certificate" */}
-          {/* /> */}
-
-          {/* <label class="file">
-              <span class="file-custom"></span>
-            </label> */}
-          {/* </div> */}
-
-          {/* <div className="receiver_details">
-            <label htmlFor="receiver">
-              Upload Certificate Receiver Details
-            </label>
-            <input type="file" placeholder="Upload Certificate Details" />
-          </div> */}
-
-          <div className="create_button">
-            <button
-              onClick={() => {
-                createCertificate();
-              }}
-            >
-              Create
-            </button>
+          Sample Certificates:
+          <div className="samplecertificate">
+            <img
+              src={certificate1}
+              alt="Sample certificate"
+              height="200"
+              width="300"
+            />
+            <img
+              src={certificate2}
+              alt="Sample certificate"
+              height="200"
+              width="300"
+            />
+            <img
+              src={certificate3}
+              alt="Sample certificate"
+              height="200"
+              width="300"
+            />
+            <img
+              src={certificate4}
+              alt="Sample certificate"
+              height="200"
+              width="300"
+            />
+            <img
+              src={certificate5}
+              alt="Sample certificate"
+              height="200"
+              width="300"
+            />
           </div>
         </div>
       </div>

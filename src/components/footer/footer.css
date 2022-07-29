@@ -1,0 +1,26 @@
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contactform {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  text-align: left;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
