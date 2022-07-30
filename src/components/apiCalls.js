@@ -1,6 +1,8 @@
 import { addFrame } from "./Create/metadata";
 
-const api = "http://localhost:8000/";
+// const api = "http://localhost:8000/";
+const api = "https://bitmemoirapi.herokuapp.com/";
+// const api = "http://43.205.120.84:8000/";
 
 export const addAdmin = async (name, designation, account, addedBy) => {
   const endpoint = "addAdmin";
