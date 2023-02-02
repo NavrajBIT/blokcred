@@ -25,9 +25,9 @@ export const Institution = () => {
     return <Connect />;
   }
 
-  if (user.userData.status !== "Approved") {
-    return <KYC />;
-  }
+  // if (user.userData.status !== "Approved") {
+  //   return <KYC />;
+  // }
 
   if (isDesigner) {
     return (

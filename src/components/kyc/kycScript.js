@@ -14,6 +14,9 @@ const KycScript = (setForm) => {
   const [contact, setcontact] = useState(user.userData.contact);
   const [regId, setregId] = useState(user.userData.regId);
   const [idProof, setidProof] = useState("");
+  const [city, setcity] = useState("");
+  const [state, setstate] = useState("");
+  const [country, setcountry] = useState("");
 
   const handleSubmit = () => {
     setStatus("");
@@ -81,6 +84,12 @@ const KycScript = (setForm) => {
     idProof,
     setidProof,
     handleSubmit,
+    city,
+    setcity,
+    state,
+    setstate,
+    country,
+    setcountry,
   };
 };
 

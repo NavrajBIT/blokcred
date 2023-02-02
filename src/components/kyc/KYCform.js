@@ -19,6 +19,13 @@ export const KYCform = (props) => {
     idProof,
     setidProof,
     handleSubmit,
+    city,
+    setcity,
+    state,
+    setstate,
+    country,
+    setcountry,
+
   } = KycScript(props.setForm);
 
   return (
@@ -70,6 +77,12 @@ export const KYCform = (props) => {
           placeholder="Phone number"
           onChange={(e) => setcontact(e.target.value)}
         />
+        <label htmlFor="City">City*</label>
+        <input value={city} type="text" onChange={(e)=> setcity(e.target.value) } id="City" name="City" placeholder="City" />
+        <label htmlFor="State">State*</label>
+        <input value={state} type="text" id="State" onChange={(e)=> setstate(e.target.value) } name="State" placeholder="State" />
+        <label htmlFor="Country">Country*</label>
+        <input value={country} type="text" id="Country" name="Country" onChange={(e)=> setcountry(e.target.value) } placeholder="Country" />
         <label htmlFor="website">CIN*</label>
         <input
           type="text"

@@ -17,6 +17,13 @@ import Privacypolicy from "./components/privacyPolicy/privacypolicy";
 import Verify from "./components/verify/verify";
 import VerifyWithDetails from "./components/verify/verifyWithDetails";
 import Dashboard from "./components/dashboard/dashboard";
+import { NFTLoyalty } from "./components/NFT-Loyalty/NFTLoyalty";
+import { IssueNFT } from "./components/NFT-Loyalty/IssueNFT";
+import { Viewnft } from "./components/NFT-Loyalty/Viewnft";
+import { Updatenft } from "./components/NFT-Loyalty/updatenft";
+
+
+
 
 // context
 import UserState from "./context/userContext/userState";
@@ -56,6 +63,13 @@ function App() {
               path="/verify/:contractAddress/:tokenId"
               element={<VerifyWithDetails />}
             />
+            <Route path="/nftlayalty" element={<NFTLoyalty />} />
+            <Route path="/issuenft" element={<IssueNFT />} />
+            <Route path="/viewnft" element={<Viewnft />} />
+            <Route path="/updatenft" element={<Updatenft />} />
+       
+            
+            
           </Routes>
           <Footer />
         </UserState>

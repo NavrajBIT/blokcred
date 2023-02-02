@@ -1,0 +1,289 @@
+.dashboardpage {
+  background-color: var(--primary);
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.individualpage {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.dashboardcontainer {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  padding: 20px;
+}
+
+.sectionheading {
+  width: 100%;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.primarydatacontainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.userdetail {
+  width: 100%;
+  max-width: 500px;
+}
+
+.userdetails {
+  width: 100%;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  word-break: break-word;
+}
+
+.certificatesectioncontainer {
+  width: 100%;
+  background-color: var(--primary);
+  background-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 0px;
+}
+
+.certificatesissued {
+  width: 200px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 1px var(--primary);
+}
+
+.certificatesissued .heading2 {
+  font-size: large;
+  font-weight: 800;
+}
+.certificatesissued .heading3 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.certContainer {
+  margin: 20px 0px;
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid var(--secondary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.framecard {
+  margin: 20px;
+  width: 250px;
+}
+
+.framepreview {
+  width: 250px;
+  height: 180px;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.framepreview img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.framebuttons {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.framecard h4 {
+  text-align: center;
+  margin: 5px;
+}
+
+.navbuttoncontainer {
+  display: flex;
+  justify-content: center;
+}
+.navbutton {
+  width: 100px;
+  text-align: center;
+}
+.wallet-address{
+  color: var(--secondary);
+  margin: 20px 0px;
+}
+button{
+  margin: 12px 40px;
+}
+
+
+.card{
+  width: 400px;
+  height: auto;
+  background-color: var(--secondary);
+  margin-top: 10px;
+  color:black;
+  border-radius: 10px;
+ 
+}
+
+select{
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  background-color:var(--secondary);
+  /* font-size: 10px; */
+  /* font-weight: 600; */
+  /* margin: 20px 0px; */
+}
+
+button{
+  margin: auto;
+  margin-top: 20px;
+}
+.subheader{
+  display: flex;
+  justify-content:space-around;
+}
+img{
+  border-radius: 10px;
+}
+td {
+  text-align: center;
+}
+table{
+  width: 100%;
+ 
+}
+
+table, td, th {
+  /* border: 1px solid black; */
+  color: rgb(61, 61, 61);
+}
+.card-text{
+  margin-left: 10px;
+}
+
+/* .rewardrow{
+  overflow: scroll;
+  height:70px;
+} */
+.card-update{
+  width: 450px;
+  background-color: var(--secondary);
+  margin-top: 10px;
+  color:black;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+  
+}
+
+.update-btn{
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+.update-btn-disable{
+ 
+  background-color: var(--secondary);
+  color: var(--primary);
+  
+}
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+input {
+  width: 92%;
+  max-width: 92%;
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0px;
+}
+span{
+  color:rgb(95, 94, 92)
+}
+input:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+}
+ol{
+  font-size: 20px;
+}
+
+.card-header{
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 10px 10px 0px 0px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  width: 500px;
+  height: 50px;
+}
+
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  color: var(--primary);
+  min-width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+#viewnft-input{
+width: 350px;
+}

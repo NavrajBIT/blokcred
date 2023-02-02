@@ -78,6 +78,15 @@ const Navbar = () => {
         <div
           className="menuitem"
           onClick={() => {
+            navigate("/nftlayalty");
+            setIsMenu(false);
+          }}
+        >
+          Loyalty
+        </div>
+        <div
+          className="menuitem"
+          onClick={() => {
             navigate("/contact");
             setIsMenu(false);
           }}
@@ -104,6 +113,9 @@ const Navbar = () => {
         </div>
         <div className="navbutton" onClick={() => navigate("/verify")}>
           Verify
+        </div>
+        <div className="navbutton" onClick={() => navigate("/nftlayalty")}>
+          Loyalty
         </div>
       </div>
       <div className="menucontainer">

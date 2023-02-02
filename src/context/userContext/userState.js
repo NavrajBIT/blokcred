@@ -14,6 +14,7 @@ const UserState = (props) => {
   const [userAccount, setUserAccount] = useState("");
   const [iswalletAvailable, setIsWalletAvailable] = useState(true);
   const [userData, setUserData] = useState({});
+  
 
   const poppulateUserAccount = () => {
     setIsWalletAvailable(window.ethereum != null);
