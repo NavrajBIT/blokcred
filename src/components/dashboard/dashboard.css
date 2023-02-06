@@ -125,3 +125,26 @@
   text-align: center;
   margin: 5px;
 }
+
+#pie{
+  background-color: aliceblue;
+  width: 500px;
+  /* margin-right:400px ; */
+}
+.container-fuild{
+  margin-right: 20px;
+}
+.piedata{
+  color: #5B7890;
+  margin-left: 320px;
+  margin-top: -400px;
+}
+.chart-box{
+  display: flex;
+  flex-direction: row;
+  width: 1100px;
+  justify-content: space-between;
+}
+#bargraph{
+  background-color: aliceblue;
+}

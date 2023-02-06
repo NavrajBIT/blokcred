@@ -46,6 +46,7 @@ export const Viewnft = () => {
             if (data.length > 0){
                 console.log(data)
                 setNFTs([data[0]]);
+                console.log(data[0])
                 setStatus("");
                 setCard(true);
             }else{

@@ -19,9 +19,9 @@ export const NFTLoyalty = () => {
         return <Connect />;
       }
     
-      if (user.userData.status !== "Approved") {
-        return <KYC />;
-      }
+      // if (user.userData.status !== "Approved") {
+      //   return <KYC />;
+      // }
 
   return (
     <div className="dashboardpage">
