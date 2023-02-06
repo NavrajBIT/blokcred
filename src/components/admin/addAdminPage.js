@@ -3,11 +3,13 @@ import "./admin.css";
 import { useState, useContext } from "react";
 import { adminApi } from "../Scripts/apiCalls";
 import UserContext from "../../context/userContext/UserContext";
+import AdminDashboard from "./adminDashboard";
 export const AddAdminPage = () => {
   const user = useContext(UserContext);
   const [status, setStatus] = useState("");
 
-  return (
+  return (<>
+  
     <div className="addAdmin">
       <h2>Add admin</h2>
       <div className="adminPageForm">
@@ -51,7 +53,9 @@ export const AddAdminPage = () => {
       >
         Add
       </button>
-    </div>
+      </div>
+      <AdminDashboard></AdminDashboard>
+  </>
   );
 };
 
