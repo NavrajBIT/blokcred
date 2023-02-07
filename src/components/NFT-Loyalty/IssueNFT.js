@@ -3,12 +3,15 @@ import './nftloyalty.css';
 import { NFTNavbar } from './NFTLoyalty';
 import { ScanPop } from './ScanPop';
 import { issueNftreward } from '../Scripts/apiCalls';
+import UserContext from "../../context/userContext/UserContext";
+import { useContext } from "react";
 
 
 
 
 
 export const IssueNFT = () => {
+    const user = useContext(UserContext);
     const [walletAddress, setWalletAddress] = useState('');
     const [image, setImage] = useState('');
     const [membershipLevel, setMembershipLevel] = useState('REGULAR');
@@ -47,8 +50,9 @@ export const IssueNFT = () => {
             ismebsershipLevel= false;
         }
         const result = await issueNftreward(
-            {account:walletAddress,
-            nameOfOrg:'XYZ',
+            {account:user.userAccount,
+            receiver:walletAddress,
+            nameOfOrg:user.userData.name,
             image:image,
             isMembership:ismebsershipLevel,
             membership: membershipLevel,

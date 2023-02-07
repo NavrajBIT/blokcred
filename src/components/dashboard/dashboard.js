@@ -102,6 +102,10 @@ const KPI = () => {
         <div className="heading3">{userData["total_souvenirs"]}</div>
         <div className="heading2">Total souvenirs issued</div>
       </div>
+      <div className="certificatesissued">
+        <div className="heading3">{userData["total_loyalty_nfts"]}</div>
+        <div className="heading2">Total Loyalty NFTs</div>
+      </div>
     </div>
   );
 };

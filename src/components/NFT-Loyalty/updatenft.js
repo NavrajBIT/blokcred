@@ -4,8 +4,11 @@ import { NFTNavbar } from './NFTLoyalty';
 import { UpdateForm } from './UpdateForm';
 import { ScanPop } from './ScanPop';
 import { claim_reward,updateNftreward,view_nft } from '../Scripts/apiCalls';
+import UserContext from "../../context/userContext/UserContext";
+import { useContext } from "react";
 
 export const Updatenft = () => {
+    const user = useContext(UserContext);
     const [walletAddress, setWalletAddress] = useState('');
     const [isUpdate,setisUpdate] = useState(false);
     const [image, setImage] = useState('');

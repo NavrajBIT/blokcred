@@ -2,8 +2,11 @@ import {React,useState} from 'react';
 import { NFTNavbar } from './NFTLoyalty';
 import { ScanPop } from './ScanPop';
 import { view_nft } from '../Scripts/apiCalls';
+import UserContext from "../../context/userContext/UserContext";
+import { useContext } from "react";
 
 export const Viewnft = () => {
+    const user = useContext(UserContext);
     const [walletAddress, setWalletAddress] = useState('');
     const [dialogOpen, setDialogOpen] = useState(false);
     const [NFTs,setNFTs] = useState([]);

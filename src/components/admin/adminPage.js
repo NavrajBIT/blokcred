@@ -8,7 +8,7 @@ import UserDetailsContainer from "./userdetailsContainer";
 
 export const AdminPage = () => {
   const user = useContext(UserContext);
-  const [isAdmin, setIsAdmin] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [status, setStatus] = useState("Checking credentials...");
   const [users, setUsers] = useState([]);
 
@@ -43,7 +43,7 @@ export const AdminPage = () => {
   return (
     <div className="adminpage">
       {status}
-      {true && (
+      {isAdmin && (
         <div className="adminTabs">
           <AddAdminPage />
           {users.length > 0 && (

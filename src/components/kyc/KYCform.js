@@ -25,6 +25,8 @@ export const KYCform = (props) => {
     setstate,
     country,
     setcountry,
+    category,
+    setcategory,
 
   } = KycScript(props.setForm);
 
@@ -83,6 +85,32 @@ export const KYCform = (props) => {
         <input value={state} type="text" id="State" onChange={(e)=> setstate(e.target.value) } name="State" placeholder="State" />
         <label htmlFor="Country">Country*</label>
         <input value={country} type="text" id="Country" name="Country" onChange={(e)=> setcountry(e.target.value) } placeholder="Country" />
+        <label htmlFor="Category">Category*</label>
+        <select value={category} id="Category" name="Category" onChange={(e)=> setcategory(e.target.value) }>
+          <option value="Agriculture">Agriculture</option>
+          <option value="Automobile">Automobile</option>
+          <option value="Banking">Banking</option>
+          <option value="Construction">Construction</option>
+          <option value="Education">Education</option>
+          <option value="Energy">Energy</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Finance">Finance</option>
+          <option value="Food">Food</option>
+          <option value="Healthcare">Healthcare</option>
+          <option value="Hospitality">Hospitality</option>
+          <option value="Insurance">Insurance</option>
+          <option value="Manufacturing">Manufacturing</option>
+          <option value="Media">Media</option>
+          <option value="Mining">Mining</option>
+          <option value="Pharmaceutical">Pharmaceutical</option>
+          <option value="Real Estate">Real Estate</option>
+          <option value="Retail">Retail</option>
+          <option value="Technology">Technology</option>
+          <option value="Telecom">Telecom</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Travel">Travel</option>
+          <option value="Other">Other</option>
+        </select>
         <label htmlFor="website">CIN*</label>
         <input
           type="text"

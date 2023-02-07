@@ -17,6 +17,7 @@ const KycScript = (setForm) => {
   const [city, setcity] = useState("");
   const [state, setstate] = useState("");
   const [country, setcountry] = useState("");
+  const [category, setcategory] = useState("");
 
   const handleSubmit = () => {
     setStatus("");
@@ -51,6 +52,10 @@ const KycScript = (setForm) => {
       website: website,
       email: email,
       contact: contact,
+      city: city,
+      state: state,
+      country: country,
+      category: category,
       regId: regId,
       idProof: idProof,
     })
@@ -90,6 +95,8 @@ const KycScript = (setForm) => {
     setstate,
     country,
     setcountry,
+    category,
+    setcategory,
   };
 };
 
