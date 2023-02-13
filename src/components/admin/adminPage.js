@@ -5,6 +5,10 @@ import AddAdminPage from "./addAdminPage";
 import UserContext from "../../context/userContext/UserContext";
 import { adminApi, userApi } from "../Scripts/apiCalls";
 import UserDetailsContainer from "./userdetailsContainer";
+import { SubNavbar } from "./SubNavbar";
+import { SideBar } from "./SideBar";
+import { Contentdashboard } from "./Contentdashboard";
+
 
 export const AdminPage = () => {
   const user = useContext(UserContext);
@@ -41,15 +45,22 @@ export const AdminPage = () => {
   };
 
   return (
-    <div className="adminpage">
+    <div >
       {status}
       {isAdmin && (
-        <div className="adminTabs">
-          <AddAdminPage />
+        <div>
+          {/* <AddAdminPage />
           {users.length > 0 && (
             <UserDetailsContainer users={users} update={poppulateUserData} />
-          )}
+          )} */}
+      <div className="dashboardpage1">
+        <SubNavbar />
+        <div className="dashboardmain">
+          <SideBar />
+          <Contentdashboard />
         </div>
+        </div>
+      </div>
       )}
     </div>
   );

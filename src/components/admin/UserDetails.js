@@ -8,7 +8,7 @@ import "./admin.css";
 import { fileDownload } from "../Scripts/tools";
 import { useContext } from "react";
 import UserContext from "../../context/userContext/UserContext";
-import { userApi } from "../Scripts/apiCalls";
+import { userApi} from "../Scripts/apiCalls";
 
 export default function UserDetails(props) {
   const appuser = useContext(UserContext);

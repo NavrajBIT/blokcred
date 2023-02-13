@@ -11,19 +11,34 @@ import Dialog from "@mui/material/Dialog";
 import Certificate from "../institution/certificate";
 import React from "react";
 import Chart from "react-apexcharts";
+import { SubNavbar } from "./SubNavbar";
+import { SideBar } from "./SideBar";
+import { Contentdashboard } from "./Contentdashboard";
 
 const Dashboard = () => {
   return (
-    <div className="dashboardpage">
-      <div className="dashboardcontainer">
-        <PrimaryDetails />
-        <KPI />
+    // <div className="dashboardpage">
+    //   <div className="dashboardcontainer">
+    //     <SubNavbar />
+    //     {/* <PrimaryDetails />
+    //     <KPI />
         
-        <PieChart />
-        {/* <PieChart2 /> */}
+    //     <PieChart /> */}
+    //     {/* <PieChart2 /> */}
        
-        {/* <Templates />
-        <Frames /> */}
+    //     {/* <Templates />
+    //     <Frames /> */}
+    //   </div>
+    // </div>
+    // <div className="dashboardmain">
+    //   <SubNavbar />
+    //   <SideBar />
+    // </div>
+    <div className="dashboardpage1">
+      <SubNavbar />
+      <div className="dashboardmain">
+        <SideBar />
+        <Contentdashboard />
       </div>
     </div>
   );
@@ -86,6 +101,7 @@ const PrimaryDetails = () => {
     </>
   );
 };
+
 
 const KPI = () => {
   const user = useContext(UserContext);
@@ -364,7 +380,7 @@ const PieChart = () => {
       </div>
     </div>
 
-    
+{/*     
     <div className="certContainer" id="bargraph">
     <React.Fragment>
         <div className="container-fuild">
@@ -422,7 +438,7 @@ const PieChart = () => {
         </div>
     </React.Fragment>
           
-      </div>
+      </div> */}
     </>
   );
 };

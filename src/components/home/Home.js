@@ -59,6 +59,7 @@ const Home = () => {
 
   const [certificates, setCertificates] = useState(0);
   const [souvenirs, setSouvenirs] = useState(0);
+  const [loyalty_nfts, setLoyalty_nfts] = useState(0);
 
   useEffect(() => {
     poppulateCertificates();
@@ -68,6 +69,7 @@ const Home = () => {
     kpiApi().then((res) => {
       setCertificates(res.certificates);
       setSouvenirs(res.souvenirs);
+      setLoyalty_nfts(res.total_loyalty_nfts);
     });
   };
   return (
@@ -136,16 +138,21 @@ const Home = () => {
         </div>
       </div>
       {/* Certificates Section------------------------ */}
-      <div className="certificatesectioncontainer">
-        <div className="certificatesissued">
+      <div className="certificatesectioncontainer2">
+        <div className="certificatesissued2">
           <div className="heading1">Total number of</div>
           <div className="heading2">Certificates Issued: </div>
           <div className="heading3">{certificates}</div>
         </div>
-        <div className="certificatesissued">
+        <div className="certificatesissued2">
           <div className="heading1">Total number of</div>
           <div className="heading2">Souvenirs Issued:</div>
           <div className="heading3">{souvenirs}</div>
+        </div>
+        <div className="certificatesissued2">
+          <div className="heading1">Total number of</div>
+          <div className="heading2">Loyalty NFTs Issued:</div>
+          <div className="heading3">{loyalty_nfts}</div>
         </div>
       </div>
       {/* How to use Section--------------------- */}

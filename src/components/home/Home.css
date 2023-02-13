@@ -158,7 +158,7 @@
 
 /* Certificates section */
 
-.certificatesectioncontainer {
+.certificatesectioncontainer2 {
   background-color: var(--secondary);
   background-image: url(./assets/certificatesectionbackground.png);
   background-size: cover;
@@ -172,7 +172,22 @@
   /* display: none; */
 }
 
-.certificatesissued {
+/* .certificatesissued {
+  width: 200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 50px;
+  border-radius: 20px;
+
+  box-shadow: 0px 0px 20px 1px var(--primary);
+} */
+.certificatesissued2 {
   width: 200px;
   margin: 20px;
   display: flex;
@@ -188,11 +203,11 @@
   box-shadow: 0px 0px 20px 1px var(--primary);
 }
 
-.certificatesissued .heading2 {
+.certificatesissued2 .heading2 {
   font-size: large;
   font-weight: 800;
 }
-.certificatesissued .heading3 {
+.certificatesissued2 .heading3 {
   font-size: 100px;
   font-weight: 600;
 }

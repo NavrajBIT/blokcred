@@ -26,11 +26,14 @@ export default function UserDetailsContainer(props) {
     <Box
       sx={{
         width: "100%",
+        height:"500px",
         maxWidth: "750px",
         border: "1px solid white",
         borderRadius: "20px",
         padding: "20px",
-        margin: "20px",
+        marginLeft: "370px",
+        // overflow: "hidden",
+        overflowY: "scroll",
       }}
     >
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
