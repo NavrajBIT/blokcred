@@ -12,7 +12,7 @@ const Navbar = () => {
   const user = useContext(UserContext);
   const navigate = useNavigate();
   const [isMenu, setIsMenu] = useState(false);
-  const [aboutustext , setaboutustext] = useState("About Us")
+  const [aboutustext, setaboutustext] = useState("About Us")
 
   const Menubar = () => {
     return (
@@ -114,13 +114,22 @@ const Navbar = () => {
           RoadMap
         </div>
         <div
-         className="menuitem"
-         onClick={() => {
-           navigate("/partners");
-           setIsMenu(false);
-         }}
+          className="menuitem"
+          onClick={() => {
+            navigate("/partners");
+            setIsMenu(false);
+          }}
         >
           Partners
+        </div>
+        <div
+          className="menuitem"
+          onClick={() => {
+            navigate("/partners");
+            setIsMenu(false);
+          }}
+        >
+          Contact Us
         </div>
       </div>
     );
@@ -148,17 +157,16 @@ const Navbar = () => {
           <div class="dropdown">
             <Button class="dropbtn">Create</Button>
             <div class="dropdown-content">
-              <a  onClick={() => { 
+              <a onClick={() => {
                 navigate("/individual")
                 // setaboutustext("Team")
-              } }>Individuals</a>
-              <a onClick={() => {navigate("/institution") 
-            }}>          Sectors
-            </a>
-             
-              
+              }}>Individuals</a>
+              <a onClick={() => {
+                navigate("/institution")
+              }}>          Sectors
+              </a>
+            </div>
           </div>
-        </div>
         </div>
         <div className="navbutton" onClick={() => navigate("/view")}>
           View
@@ -175,28 +183,6 @@ const Navbar = () => {
         {/* <div className="navbutton" onClick={() => navigate("/partners")}>
         Partners
         </div> */}
-        <div className="navbutton" >
-          <div class="dropdown">
-            <Button class="dropbtn">{aboutustext}</Button>
-            <div class="dropdown-content">
-              <a  onClick={() => { 
-                navigate("/team")
-                // setaboutustext("Team")
-              } }>Team</a>
-              <a onClick={() => {navigate("/roadmap") 
-            }}>RoadMap</a>
-              <a onClick={() => {navigate("/whitepapper") 
-              // setaboutustext("WhitePaper")
-            }}>WhitePaper </a>
-              <a onClick={() => {navigate("/tokenomics")
-              // setaboutustext("Tokenomics")
-            }}>Tokenomics</a>
-              <a onClick={() => {navigate("/partners")
-              // setaboutustext("Partners")
-            }}>Partners</a>
-          </div>
-        </div>
-        </div>
       </div>
       <div className="menucontainer">
         <img
@@ -216,8 +202,33 @@ const Navbar = () => {
         />
       </div> */}
       <div className="navrightbuttoncontainer">
-        <div className="contactusbutton">
-          <button onClick={() => navigate("/contact")}>Contact Us</button>
+        <div class="dropdown">
+          <Button class="">{aboutustext}</Button>
+          <div class="dropdown-content">
+            <a onClick={() => {
+              navigate("/team")
+              // setaboutustext("Team")
+            }}>Team</a>
+            <a onClick={() => {
+              navigate("/roadmap")
+            }}>RoadMap</a>
+            <a onClick={() => {
+              navigate("/whitepapper")
+              // setaboutustext("WhitePaper")
+            }}>WhitePaper </a>
+            <a onClick={() => {
+              navigate("/tokenomics")
+              // setaboutustext("Tokenomics")
+            }}>Tokenomics</a>
+            <a onClick={() => {
+              navigate("/partners")
+              // setaboutustext("Partners")
+            }}>Partners</a>
+            <a onClick={() => {
+              navigate("/contact")
+              // setaboutustext("Partners")
+            }}>Contact Us</a>
+          </div>
         </div>
         {user.iswalletAvailable ? (
           user.isConnected ? (
